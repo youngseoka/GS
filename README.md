@@ -23,13 +23,13 @@ Hyperledger_fabric, IPFS, DID, NFT, Monitoring
 - 설치 전 한대의 서버 혹은 노드를 마스터 노드라 지칭하고 기준으로 삼는다.
 
 - MasterNode
- docker swarm init --advertise-addr <master_node_ip>
- docker swarm join-token manager
- -> 출력값 ex) docker swarm join --token SWMTKN-1-5149xr7hs32v4ygf6bb609vckh0x4wulwdnr8kfcqp57izlgdk-5z162w2f9s9c8m6effaj3lw1a <master_node_ip>:2377
+ - docker swarm init --advertise-addr <master_node_ip>
+ - docker swarm join-token manager
+ - -> 출력값 ex) docker swarm join --token SWMTKN-1-5149xr7hs32v4ygf6bb609vckh0x4wulwdnr8kfcqp57izlgdk-5z162w2f9s9c8m6effaj3lw1a <master_node_ip>:2377
 
 - 다른 7대의 NODE
-MasterNode의 출력값에 --advertise-addr <node_ip>를 입력한다
--> 입력값 ex) docker swarm join --token SWMTKN-1-5149xr7hs32v4ygf6bb609vckh0x4wulwdnr8kfcqp57izlgdk-5z162w2f9s9c8m6effaj3lw1a <master_node_ip>:2377 --advertise-addr <node_ip>
+ - MasterNode의 출력값에 --advertise-addr <node_ip>를 입력한다
+ - -> 입력값 ex) docker swarm join --token SWMTKN-1-5149xr7hs32v4ygf6bb609vckh0x4wulwdnr8kfcqp57izlgdk-5z162w2f9s9c8m6effaj3lw1a <master_node_ip>:2377 --advertise-addr <node_ip>
 
 전체 노드에서 docker info 사용하여 docker swarm에 아이피 추가된거 확인.
 ..
